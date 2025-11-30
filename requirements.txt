@@ -1,2 +1,4 @@
 streamlit_lottie
 folium
+streamlit_folium
+finder
