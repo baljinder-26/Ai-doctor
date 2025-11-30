@@ -8,7 +8,7 @@ numpy
 pandas
 joblib
 tensorflow
-cv2
+opencv-python-headless>=4.9.0
 xgboost
 openpyxl
 matplotlib
