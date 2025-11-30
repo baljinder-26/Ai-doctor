@@ -5,14 +5,14 @@ import time
 import s
 
 # Import your modules
-try:
-    import brain_tumor
-    import heart_disease
-    import lung_disease
-    import eye
-    import kidney_disease
-except ImportError as e:
-    st.error(f"Could not import brain_tumor module: {e}")
+# try:
+# import brain_tumor
+import heart_disease
+import lung_disease
+import eye
+import kidney_disease
+# except ImportError as e:
+#     st.error(f"Could not import brain_tumor module: {e}")
 
 # Initialize session_state
 if "current_page" not in st.session_state:
@@ -564,8 +564,8 @@ def show():
         def go_to_home():
             st.session_state.current_page = "home"
 
-        def go_to_brain_tumor():
-            st.session_state.current_page = "brain_tumor"
+        # def go_to_brain_tumor():
+        #     st.session_state.current_page = "brain_tumor"
 
         def go_to_heart_disease():
             st.session_state.current_page = "heart_disease"
@@ -664,8 +664,9 @@ def show():
                 
                 # Animated Analyze Button - Neon Green Brain
                 if st.button("🧠 Analyze Brain MRI", key="brain-btn", use_container_width=True):
-                    go_to_brain_tumor()
-                    st.rerun()
+                    st.ballons()
+                    # go_to_brain_tumor()
+                    # st.rerun()
                 
                 st.markdown('</div>', unsafe_allow_html=True)
 
@@ -784,29 +785,29 @@ def show():
             st.markdown('</div>', unsafe_allow_html=True)
 
         # Brain Tumor page
-        elif st.session_state.current_page == "brain_tumor":
-            st.markdown('<div class="page-content">', unsafe_allow_html=True)
+        # elif st.session_state.current_page == "brain_tumor":
+        #     st.markdown('<div class="page-content">', unsafe_allow_html=True)
             
-            # Back button
-            if st.button("⬅️ Back to Disease Selection", key="back_brain"):
-                go_to_home()
-                st.rerun()
+        #     # Back button
+        #     if st.button("⬅️ Back to Disease Selection", key="back_brain"):
+        #         go_to_home()
+        #         st.rerun()
             
-            with st.spinner("🧠 Loading Brain Tumor Detection Module..."):
-                time.sleep(1.5)
+        #     with st.spinner("🧠 Loading Brain Tumor Detection Module..."):
+        #         time.sleep(1.5)
             
-            st.success("Brain Tumor module loaded successfully!✅")
+        #     st.success("Brain Tumor module loaded successfully!✅")
             
-            # Call the function from brain_tumor.py
-            try:
-                brain_tumor.brain()
-            except Exception as e:
-                st.error(f"Error loading brain tumor module: {e}")
-                if st.button("🔄 Return to Home"):
-                    go_to_home()
-                    st.rerun()
+        #     # Call the function from brain_tumor.py
+        #     try:
+        #         brain_tumor.brain()
+        #     except Exception as e:
+        #         st.error(f"Error loading brain tumor module: {e}")
+        #         if st.button("🔄 Return to Home"):
+        #             go_to_home()
+        #             st.rerun()
                 
-            st.markdown('</div>', unsafe_allow_html=True)
+        #     st.markdown('</div>', unsafe_allow_html=True)
 
         elif st.session_state.current_page == "heart_disease":
             if st.button("⬅️ Back to Disease Selection", key="back_brain"):
