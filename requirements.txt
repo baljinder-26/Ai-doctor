@@ -1,3 +1,16 @@
 streamlit_lottie
 folium
 streamlit_folium
+tensorflow
+streamlit
+scikit-learn
+numpy
+pandas
+joblib
+
+
+tensorflow
+
+xgboost
+openpyxl
+matplotlib
