@@ -7,10 +7,8 @@ scikit-learn
 numpy
 pandas
 joblib
-
-
 tensorflow
-os
+
 xgboost
 openpyxl
 matplotlib
